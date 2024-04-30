@@ -1,8 +1,8 @@
-import { PostContext } from "@/contexts/PostContext";
-import { useContext, useState } from "react";
+import { usePosts } from "@/contexts/PostContext";
+import { useState } from "react";
 
 export function Header() {
-    const postCtx = useContext(PostContext);
+    const postCtx = usePosts();
 
     const [ titleInput, setTitleInput ] = useState('');
     const [ bodyInput, setBodyInput ] = useState('');
